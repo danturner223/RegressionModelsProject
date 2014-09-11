@@ -1,0 +1,39 @@
+---
+title: "Regression Models Project Kirsten Frank"
+author: "Kirsten Frank"
+date: "September 9, 2014"
+output: html_document
+---
+
+# Executive Summary
+
+
+##Project description. 
+
+Using the data in the mtcars dataset, determine whether manual cars have lower mpg than automatic. Derive an estimate of the difference and interpret the difference.
+
+##Considerations
+
+Manual and automatic transmission cars may differ for reasons other than the transmission type. Exploratory data analysis will allow us to find these differences and interpret them. All numeric variables will be plotted as two boxplots comparing manual transmission in one box against automatic transmission in the other box.
+
+##Version Information
+```{r}
+VersionInfo<-R.Version()
+print(VersionInfo$platform)
+print(VersionInfo$version.string)
+```
+Data is originally from the 1974 <i>Motor Trend</i> US magazine.
+
+
+```{r}
+summary(mtcars)
+```
+
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

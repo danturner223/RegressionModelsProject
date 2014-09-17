@@ -16,6 +16,38 @@ Using the data in the mtcars dataset, determine whether manual cars have lower m
 
 Manual and automatic transmission cars may differ for reasons other than the transmission type. Exploratory data analysis will allow us to find these differences and interpret them. All numeric variables will be plotted as two boxplots comparing manual transmission in one box against automatic transmission in the other box.
 
+```{r}
+## Boxplot of MPG
+boxplot(mpg~am,mtcars)
+```
+The mpg of AM=1 is clearly higher.
+
+```{r}
+## Boxplot of weight
+boxplot(wt~am,mtcars)
+```
+The weight of AM=1 is clearly lower
+
+```{r}
+boxplot(gear~am,mtcars)
+```
+This is only slightly informative, because gear is not a continuous variable. 
+```{r}
+### plot(am,gear,mtcars)
+## Don't know what is happening here, but won't plot.
+```
+
+```{r}
+boxplot(cyl~am,mtcars)
+```
+
+Again blocky because cylinders is more of a discrete variable. But AM=1 has fewer cylinders.
+
+```{r}
+boxplot(disp~am,mtcars)
+```
+Cars with AM=1 have lower displacement.
+
 ##Version Information
 ```{r}
 VersionInfo<-R.Version()
@@ -29,8 +61,6 @@ Data is originally from the 1974 <i>Motor Trend</i> US magazine.
 summary(mtcars)
 ```
 
-
-You can also embed plots, for example:
 
 ```{r, echo=FALSE}
 plot(cars)
